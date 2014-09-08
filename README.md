@@ -1,9 +1,11 @@
 Na Backup DB
 ============
 
-This script was created by Nicolas AGUENOT (contact@nicolasaguenot.com).
+This script was created by Nicolas AGUENOT (<contact@nicolasaguenot.com>).
 
 This main utility is to backup database in terms of information provided on config.sh file
+
+---------------------------------------
 
 Config
 ------
@@ -31,6 +33,7 @@ Register your informations on config.sh file like this :
     ## MAX BACKUP STORED
     MAXBACKUP=[MAX_BACKUP_STORED - In General : 5]
 
+---------------------------------------
 
 How to use ?
 ------------
@@ -41,3 +44,27 @@ After configurating your config.sh file, launch this command :
     sh backup.sh
 
 And It works !
+
+
+Different directory
+------------
+
+A directory sql is created with 3 sub-directory :
+
+### archives/
+
+containing previous backup
+
+### lastbackup/
+
+containing latest backup.
+
+when you relaunch the script, this backup will be move to archives/ directory.
+
+### tmpbackup/
+
+containing lastest backup on sql format.
+
+when you relaunch the script, this file will be replaced by newest sql file backup.
+
+
