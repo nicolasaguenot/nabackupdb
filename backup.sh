@@ -26,6 +26,6 @@ ${MYSQLDUMPPATH} -u${DBUSER} -p${DBPSWD} ${DBNAME} > ${TMPFOLDER}"/"${DBNAME}_`d
 echo "[==== STEP 5/6] Compress dump database (${DBNAME}) to this path : ${LASTBACKUPFOLDER}"/"${DBNAME}_`date +"${DATEFORMAT}"`.sql";
 tar cvf ${LASTBACKUPFOLDER}"/"${DBNAME}_`date +"${DATEFORMAT}"`.sql.tar.gz ${TMPFOLDER}"/"${DBNAME}_`date +"${DATEFORMAT}"`.sql
 
-echo "[==== STEP 6/6] Keep ${MAXBACKUP} archive(s) and delete others";
 ##find ${ARCHIVEFOLDER}/ -type f -mtime +${MAXDAYBACKUP} -delete
+echo "[==== STEP 6/6] Keep ${MAXBACKUP} archive(s) and delete others";
 find ${ARCHIVEFOLDER} -maxdepth 1 -type f | xargs ls -t | awk 'NR>'${MAXBACKUP} | xargs rm -rf
