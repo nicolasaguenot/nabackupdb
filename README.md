@@ -23,25 +23,39 @@ Register your informations on config.sh file like this :
     TMPFOLDER=sql/tmpbackup
     ARCHIVEFOLDER=sql/archives
 
-
     ## SCRIPT PATH
     MYSQLDUMPPATH=[YOUR_MYSQLDUMP_COMMAND_PATH - In general : /usr/bin/mysqldump]
 
     ## DATEFORMAT
     DATEFORMAT=[YOUR DATE FORMAT - In General : %Y-%m-%d-%H-%M (Year-Month-Day-Hours-Minuts)]
 
-    ## MAX BACKUP STORED
-    MAXBACKUP=[MAX_BACKUP_STORED - In General : 5]
+    ## MAX BACKUP STORED - [MAXBACKUP - In General : 5]
+    MAXBACKUP=5
+
+    ## MAX RESTORED BACKUP - [MAXRESTORE - In General : 5]
+    MAXRESTORE=5
 
 ---------------------------------------
 
-How to use ?
+How to dump my database ?
 ------------
 
 Open terminal and come to nabackupdb directory.
 After configurating your config.sh file, launch this command :
 
     sh backup.sh
+
+And It works !
+
+---------------------------------------
+
+How to restore my latest dumped database ?
+------------
+
+Open terminal and come to nabackupdb directory.
+After configurating your config.sh file, launch this command :
+
+    sh restore.sh
 
 And It works !
 
@@ -60,6 +74,11 @@ containing previous backup
 containing latest backup.
 
 when you relaunch the script, this backup will be move to archives/ directory.
+
+### lastrestored/
+
+containing lastest restored file on sql format.
+
 
 ### tmpbackup/
 
