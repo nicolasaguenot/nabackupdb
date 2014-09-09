@@ -10,6 +10,10 @@ This main utility is to backup database in terms of information provided on conf
 Config
 ------
 
+Rename config_sample.sh to config.sh
+
+    mv config_sample.sh config.sh
+
 Register your informations on config.sh file like this :
 
 
@@ -22,6 +26,7 @@ Register your informations on config.sh file like this :
     LASTBACKUPFOLDER=sql/lastbackup
     TMPFOLDER=sql/tmpbackup
     ARCHIVEFOLDER=sql/archives
+    RESTOREDFOLDER=sql/lastrestored
 
     ## SCRIPT PATH
     MYSQLDUMPPATH=[YOUR_MYSQLDUMP_COMMAND_PATH - In general : /usr/bin/mysqldump]
