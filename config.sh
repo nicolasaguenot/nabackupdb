@@ -10,7 +10,6 @@ DBPSWD=userWp
 LASTBACKUPFOLDER=sql/lastbackup
 TMPFOLDER=sql/tmpbackup
 ARCHIVEFOLDER=sql/archives
-
 RESTOREDFOLDER=sql/lastrestored
 
 

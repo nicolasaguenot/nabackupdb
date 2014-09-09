@@ -1,0 +1,24 @@
+#!/bin/sh
+
+## DB
+DBNAME=[YOUR_DATABASE_NAME]
+DBUSER=[YOUR_DATABASE_USER]
+DBPSWD=[YOUR_DATABASE_PASSWORD]
+
+## FOLDER
+LASTBACKUPFOLDER=sql/lastbackup
+TMPFOLDER=sql/tmpbackup
+ARCHIVEFOLDER=sql/archives
+RESTOREDFOLDER=sql/lastrestored
+
+
+## SCRIPT PATH - [YOUR_MYSQLDUMP_COMMAND_PATH - In general : /usr/bin/mysqldump]
+MYSQLDUMPPATH=/usr/bin/mysqldump
+
+## DATEFORMAT - [YOUR DATE FORMAT - In General : %Y-%m-%d-%H-%M (Year-Month-Day-Hours-Minuts)]
+DATEFORMAT=%Y-%m-%d-%H-%M
+
+## MAX BACKUP STORED - [MAXBACKUP - In General : 5]
+MAXBACKUP=5
+## MAX RESTORED BACKUP - [MAXRESTORE - In General : 5]
+MAXRESTORE=5
